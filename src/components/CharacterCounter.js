@@ -3,6 +3,8 @@ import { useRecoilState } from 'recoil';
 
 import { textState } from '../atoms/text';
 
+import CharacterCount from './CharacterCount';
+
 function TextInput() {
   const [text, setText] = useRecoilState(textState);
 
@@ -23,7 +25,7 @@ function CharacterCounter() {
   return (
     <div>
       <TextInput />
-      {/* <CharacterCount /> */}
+      <CharacterCount />
     </div>
   )
 }

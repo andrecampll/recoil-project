@@ -5,6 +5,8 @@ import { textState } from '../atoms/text';
 
 import CharacterCount from './CharacterCount';
 
+import { Input } from './styles';
+
 function TextInput() {
   const [text, setText] = useRecoilState(textState);
 
@@ -14,7 +16,7 @@ function TextInput() {
 
   return (
     <div>
-      <input type="text" value={text} onChange={onChange} />
+      <Input type="text" value={text} onChange={onChange} />
       <br />
       Echo: {text}
     </div>
